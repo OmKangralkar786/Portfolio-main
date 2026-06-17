@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Kangralkar | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="view-image">
+        <img src="https://images.unsplash.com/photo-1668954206766-404e981f57f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60." alt="">
+        <span>X</span>
+    </div>
+
+    <div class="image-container">
+        <img src="img/19.png" alt="">
+        <img src="img/20.png" alt="">
+        
+        <img src="img/21.jpeg" alt="">
+        <img src="img/18.jpg" alt="">
+        
+
+    
+
+    
+
+    </div>
+</body>
+<script>
+    let images = document.querySelectorAll(".image-container img");
+    let viewImage = document.querySelector(".view-image");
+    let fullImage = document.querySelector(".view-image img");
+    let closeBtn = document.querySelector(".view-image span");
+    for(let image of images){
+        image.addEventListener("click",function(e){
+            console.log(e);
+            viewImage.style.display = "flex";
+            fullImage.src = e.target.src;
+        })
+    }
+    closeBtn.addEventListener('click',function(){
+        viewImage.style.display = "none";
+    })
+</script>
+</html>
